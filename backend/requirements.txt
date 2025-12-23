@@ -3,3 +3,5 @@ uvicorn
 pyodbc
 google-api-python-client
 python-dotenv
+pymssql
+
