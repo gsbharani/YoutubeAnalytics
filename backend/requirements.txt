@@ -1,7 +1,5 @@
 fastapi
 uvicorn
-pyodbc
-google-api-python-client
 python-dotenv
 pymssql
-
+google-api-python-client
