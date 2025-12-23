@@ -1,9 +1,9 @@
-from datetime import date
-from .database import get_cursor
+from app.database import get_cursor
 
-def insert_metrics(stats):
-    cursor = get_cursor()
-    cursor.execute("""
-        EXEC dbo.sp_InsertDailyChannelMetrics ?, ?, ?, ?, ?
-    """, stats["channel_id"], stats["subs"], stats["views"], 0, 0)
-    cursor.commit()
+conn, cursor = get_cursor()
+
+cursor.execute("EXEC dbo.sp_InsertDailyChannelMetrics %s, %s, %s, %s, %s",
+               (channel_id, subscribers, views, watch_time, revenue))
+conn.commit()
+cursor.close()
+conn.close()
