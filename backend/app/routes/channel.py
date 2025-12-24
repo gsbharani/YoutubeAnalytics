@@ -1,12 +1,17 @@
 from fastapi import APIRouter
-from app.youtube import resolve_channel_id, fetch_stats
-from app.crud import insert_metrics
+from app.services.excel_service import load_channels
 
-router = APIRouter()
+router = APIRouter(prefix="/channels", tags=["Channels"])
 
-@router.get("/analyze")
-def analyze(url: str):
-    channel_id = resolve_channel_id(url)
-    stats = fetch_stats(channel_id)
-    insert_metrics(stats)
-    return stats
+@router.get("/")
+def get_channels():
+    return load_channels()
+
+@router.get("/compare")
+def compare_channels():
+    data = load_channels()
+    return {
+        "labels": [c["channel_name"] for c in data],
+        "subscribers": [c["subscribers"] for c in data],
+        "views": [c["views"] for c in data]
+    }
