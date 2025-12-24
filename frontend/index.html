@@ -1,14 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>YouTube Analytics Dashboard</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>YouTube Analytics Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-  <h1>YouTube Analytics Dashboard</h1>
-  <table id="channelTable"></table>
 
-  <script src="api.js"></script>
-  <script src="dashboard.js"></script>
+<h1>YouTube Channel Analytics</h1>
+
+<input type="text" id="searchInput" placeholder="Search channel name...">
+
+<table id="channelTable">
+    <thead></thead>
+    <tbody></tbody>
+</table>
+
+<canvas id="subscribersChart"></canvas>
+<canvas id="viewsChart"></canvas>
+
+<script src="dashboard.js"></script>
 </body>
 </html>
