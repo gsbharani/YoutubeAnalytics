@@ -1,42 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YouTube Analytics Dashboard</title>
-    <link rel="stylesheet" href="css/style.css">
+  <title>YouTube Analytics Dashboard</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        YouTube Analytics Dashboard
-    </header>
+  <h1>YouTube Analytics Dashboard</h1>
+  <table id="channelTable"></table>
 
-    <div class="container">
-
-        <!-- Single Channel Analysis -->
-        <div class="card">
-            <h2>Analyze a Channel</h2>
-            <input id="url" type="text" placeholder="Enter YouTube URL or @handle" />
-            <button onclick="analyzeChannel()">Analyze</button>
-        </div>
-
-        <!-- Channel Comparison -->
-        <div class="card">
-            <h2>Compare Channels</h2>
-            <input id="channel1" type="text" placeholder="Channel 1 URL or @handle" />
-            <input id="channel2" type="text" placeholder="Channel 2 URL or @handle" />
-            <button onclick="compare()">Compare</button>
-        </div>
-
-        <!-- Result Display -->
-        <div id="result" class="card">
-            <p>Results will appear here...</p>
-        </div>
-
-    </div>
-
-    <!-- Scripts -->
-    <script src="js/api.js"></script>
-    <script src="js/dashboard.js"></script>
+  <script src="api.js"></script>
+  <script src="dashboard.js"></script>
 </body>
 </html>
