@@ -1,18 +1,36 @@
 body {
-  font-family: Arial;
-  padding: 20px;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+h1 {
+    margin-bottom: 10px;
+}
+
+input {
+    padding: 8px;
+    width: 300px;
+    margin-bottom: 15px;
 }
 
 table {
-  border-collapse: collapse;
-  width: 80%;
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 40px;
 }
 
 th, td {
-  border: 1px solid #ccc;
-  padding: 10px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
 }
 
 th {
-  background: #f2f2f2;
+    background-color: #f4f4f4;
+}
+
+canvas {
+    max-width: 100%;
+    margin-bottom: 40px;
 }
